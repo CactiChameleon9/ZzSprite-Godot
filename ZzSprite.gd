@@ -5,6 +5,10 @@ var shapes = [[Rect2(0, 0, 0, 0),"#000"]]
 var random_seed : int
 var color = "#000"
 
+const ZzSpriteRandom = preload("ZzSpriteRandom.cs") # Relative path
+onready var zz_random = ZzSpriteRandom.new()
+
+
 func _draw():
 	for shape in shapes:
 		draw_rect(shape[0], shape[1])
@@ -16,7 +20,7 @@ func _ready() -> void:
 
 func _random(num_max=1, num_min=0):
 
-	random_seed = $Random.generate_seed(random_seed)
+	random_seed = zz_random.generate_seed(random_seed)
 	
 	return (fmod(abs(random_seed), 1e9) / 1e9)*(num_max-num_min) + num_min
 	
