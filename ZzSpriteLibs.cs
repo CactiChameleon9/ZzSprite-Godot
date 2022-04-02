@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class ZzSpriteRandom : Node
+public class ZzSpriteLibs : Node
 {
 	
 	public Int32 generate_seed(Int32 random_seed){
