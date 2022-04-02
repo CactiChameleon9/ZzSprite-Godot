@@ -48,7 +48,7 @@ func ZzSprite(x=0, y=0, mseed=1, size=16, mode=0, mutate_seed=0, color_seed=0):
 	# outline then fill
 	if (mode != 3):
 		_draw_sprite_internal(x, y, 1, mode, w, h, flix_axis, color_seed, colorRand, density, spriteSize, y_bias, double_center, mseed)
-	yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(0.1), "timeout")
 	_draw_sprite_internal(x, y, null, mode, w, h, flix_axis, color_seed, colorRand, density, spriteSize, y_bias, double_center, mseed)
 
 
