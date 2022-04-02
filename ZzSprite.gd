@@ -34,7 +34,7 @@ func ZzSprite(x=0, y=0, mseed=1, size=16, mode=0, mutate_seed=0, color_seed=0):
 	var h = size-3 if !flix_axis else size/2 - 1 |0
 	
 	# apply mutations
-	random_seed += mutate_seed #+ 1e8
+	random_seed = zz_libs.add_int32(random_seed, mutate_seed, 1e8)
 	var spriteSize = size * _random(.9, .6)
 	var density = _random(1, .9)
 	var double_center = _random() < .5
@@ -63,7 +63,7 @@ func _draw_sprite_internal(x, y, outline, mode, w, h, flix_axis, color_seed, col
 
 			# pick new _random color using color seed
 			var saveSeed = random_seed
-			random_seed += color_seed #+ 1e9
+			random_seed = zz_libs.add_int32(random_seed, color_seed, 1e9)
 			var r = int(_random(360))|0
 			#var newColor = `hsl(${ r },${ _random(200,0)|0 }%,${ _random(100,20)|0 }%)`
 			#var newColor = `hsl(${ r },${ _random(200,0)|0 }%,${ _random(100,20)|0 }%)`
