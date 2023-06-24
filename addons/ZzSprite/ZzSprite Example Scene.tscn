@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://chgyeuiuat1wr"]
 
-[ext_resource type="Script" path="res://ZzSprite.gd" id="1"]
+[ext_resource type="Script" path="res://addons/ZzSprite/ZzSprite.gd" id="1_b8axq"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="ZzSprite" type="Node2D" parent="."]
 position = Vector2(507, 227)
 scale = Vector2(17, 17)
-script = ExtResource("1")
+script = ExtResource("1_b8axq")
 sprite_seed = 39482
 recolor_seed = -6
 sprite_bit_size = 20
@@ -16,7 +16,7 @@ offset = Vector2i(-10, -10)
 [node name="ZzSprite2" type="Node2D" parent="."]
 position = Vector2(338, 427)
 scale = Vector2(23, 23)
-script = ExtResource("1")
+script = ExtResource("1_b8axq")
 sprite_seed = 22085414
 recolor_seed = 104
 draw_outline = false
@@ -24,19 +24,19 @@ draw_outline = false
 [node name="ZzSprite3" type="Node2D" parent="."]
 position = Vector2(133, 136)
 scale = Vector2(23, 23)
-script = ExtResource("1")
+script = ExtResource("1_b8axq")
 sprite_seed = 39391
 color_mode = 2
 
 [node name="ZzSprite4" type="Node2D" parent="."]
 position = Vector2(773, 180)
 scale = Vector2(25, 25)
-script = ExtResource("1")
+script = ExtResource("1_b8axq")
 recolor_seed = 8
 
 [node name="ZzSprite5" type="Node2D" parent="."]
 position = Vector2(892, 436)
 scale = Vector2(20, 20)
-script = ExtResource("1")
+script = ExtResource("1_b8axq")
 mutating_seed = 10
 color_mode = 1
